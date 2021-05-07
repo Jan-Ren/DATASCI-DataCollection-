@@ -170,3 +170,66 @@ ph[ph.NAME_1=="Metropolitan Manila"].plot(ax=ax, color='white', edgecolor='dimgr
 MetroManila_healthsites[MetroManila_healthsites.amenity=="healthcare"].plot(ax=ax, column="amenity", alpha=0.35, legend=True)
 ax.set_title('Healthcare in Metropolitan Manila', fontsize=15)
 ax.axis('off');
+
+"""**OVER ALL PLOTTING**"""
+
+fig, axs = plt.subplots(4, 3, figsize=(15,15))
+
+ph[ph.NAME_1=="Metropolitan Manila"].plot(ax=axs[0,0], color='white', edgecolor='dimgray')
+MetroManila_healthsites[MetroManila_healthsites.amenity=="healthcare"].plot(ax=axs[0,0], column="amenity", alpha=0.35, legend=True)
+ax =axs[0,0].set_title('Healthcare in Metropolitan Manila', fontsize=15)
+ax =axs[0,0].axis('off');
+
+ph[ph.NAME_1=="Metropolitan Manila"].plot(ax=axs[0,1], color='white', edgecolor='dimgray')
+MetroManila_healthsites[MetroManila_healthsites.amenity=="pharmacy"].plot(ax=axs[0,1], column="amenity", alpha=0.35, legend=True)
+axs[0,1].set_title('Pharmacys in Metropolitan Manila', fontsize=15)
+axs[0,1].axis('off');
+
+ph[ph.NAME_1=="Metropolitan Manila"].plot(ax=axs[0,2], color='white', edgecolor='dimgray')
+MetroManila_healthsites[MetroManila_healthsites.amenity=="clinic"].plot(ax=axs[0,2], column="amenity", alpha=0.35, legend=True)
+axs[0,2].set_title('Clinics in Metropolitan Manila', fontsize=15)
+axs[0,2].axis('off');
+
+ph[ph.NAME_1=="Metropolitan Manila"].plot(ax=axs[1,0], color='white', edgecolor='dimgray')
+MetroManila_healthsites[MetroManila_healthsites.amenity=="hospital"].plot(ax=axs[1,0], column="amenity", alpha=0.35, legend=True)
+axs[1,0].set_title('Hospitals in Metropolitan Manila', fontsize=15)
+axs[1,0].axis('off');
+
+ph[ph.NAME_1=="Metropolitan Manila"].plot(ax=axs[1,1], color='white', edgecolor='dimgray')
+MetroManila_healthsites[MetroManila_healthsites.amenity=="doctors"].plot(ax=axs[1,1], column="amenity", alpha=0.35, legend=True)
+axs[1,1].set_title('Doctors in Metropolitan Manila', fontsize=15)
+axs[1,1].axis('off');
+
+ph[ph.NAME_1=="Metropolitan Manila"].plot(ax=axs[1,2], color='white', edgecolor='dimgray')
+MetroManila_healthsites[MetroManila_healthsites.amenity=="dentist"].plot(ax=axs[1,2], column="amenity", alpha=0.35, legend=True)
+axs[1,2].set_title('Dentists in Metropolitan Manila', fontsize=15)
+axs[1,2].axis('off');
+
+ph[ph.NAME_1=="Iloilo"].plot(ax=axs[2,0], color='white', edgecolor='dimgray')
+Iloilo_healthsites[Iloilo_healthsites.amenity=="clinic"].plot(ax=axs[2,0], column="amenity", alpha=0.35, legend=True)
+axs[2,0].set_title('Clinics in Iloilo', fontsize=15)
+axs[2,0].axis('off');
+
+ph[ph.NAME_1=="Iloilo"].plot(ax=axs[2,1], color='white', edgecolor='dimgray')
+Iloilo_healthsites[Iloilo_healthsites.amenity=="doctors"].plot(ax=axs[2,1], column="amenity", alpha=0.35, legend=True)
+axs[2,1].set_title('Doctors in Iloilo', fontsize=15)
+axs[2,1].axis('off');
+
+ph[ph.NAME_1=="Iloilo"].plot(ax=axs[2,2], color='white', edgecolor='dimgray')
+Iloilo_healthsites[Iloilo_healthsites.amenity=="dentist"].plot(ax=axs[2,2], column="amenity", alpha=0.35, legend=True)
+axs[2,2].set_title('Dentists in Iloilo', fontsize=15)
+axs[2,2].axis('off');
+
+ph[ph.NAME_1=="Iloilo"].plot(ax=axs[3,0], color='white', edgecolor='dimgray')
+Iloilo_healthsites[Iloilo_healthsites.amenity=="hospital"].plot(ax=axs[3,0], column="amenity", alpha=0.35, legend=True)
+axs[3,0].set_title('Hospitals in Iloilo', fontsize=15)
+axs[3,0].axis('off');
+
+ph[ph.NAME_1=="Iloilo"].plot(ax=axs[3,1], color='white', edgecolor='dimgray')
+Iloilo_healthsites[Iloilo_healthsites.amenity=="pharmacy"].plot(ax=axs[3,1], column="amenity", alpha=0.35, legend=True)
+axs[3,1].set_title('Pharmacys in Iloilo', fontsize=15)
+axs[3,1].axis('off');
+
+ph[ph.NAME_1=="Iloilo"].plot(ax=axs[3,2], color='white', edgecolor='dimgray')
+axs[3,2].set_title('Healthcare in Iloilo', fontsize=15)
+axs[3,2].axis('off');
